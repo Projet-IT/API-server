@@ -1,3 +1,5 @@
+const sqlite = require('sqlite3')
+
 function database () {
     return new sqlite.Database('./data.db', (err) => {
         if (err) {
@@ -5,3 +7,5 @@ function database () {
         }
     })
 }
+
+module.exports = { database }

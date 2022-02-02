@@ -1,16 +1,23 @@
-const db = require('../db')
+const sqlite = require('../db')
 
 function routes(fastify){
     fastify.get('/', async (request, reply) => {
 
+        let db = sqlite.database()
 
-        let db = this.database()
         db.serialize(() => {
             db.prepare(
-                `CREATE TABLE IF NOT EXISTS "server" ("server_type" TEXT NOT NULL,"name"TEXT NOT NULL,"id"INTEGER NOT NULL,PRIMARY KEY("id" AUTOINCREMENT));`
+                `create table if not exists devices
+                (
+                    id integer
+                        constraint devices_pk
+                            primary key autoincrement
+                );`
             ).run().finalize();
 
-            db.all(`SELECT * FROM server ORDER BY server_type ASC`, (err, rows) => {
+            db.all(`SELECT id FROM devices`, (err, rows) => {
+
+                reply.send(rows)
 
                 for (let element of rows){
                     console.log(element)
@@ -20,14 +27,6 @@ function routes(fastify){
 
             db.close();
         });
-
-        return {
-            devices: [
-                "test",
-                "test2",
-                "test3"
-            ]
-        }
     })
 }
 
