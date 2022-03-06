@@ -1,19 +1,6 @@
-GET http://localhost:8000/getdevices/
-Accept: application/json
-
-###
-POST http://localhost:8000/post/adddevice/test/pir/3
-Content-Type: application/x-www-form-urlencoded
-
-###
-# Test your FastAPI endpoints
-
-GET http://127.0.0.1:8000/
-Accept: application/json
-
 ###
 
-GET http://127.0.0.1:8000/getconfig/5
+GET http://127.0.0.1:8000/alarme/0
 Accept: application/json
 
 ###
