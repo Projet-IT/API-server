@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/SHS-API-server.iml" filepath="$PROJECT_DIR$/.idea/SHS-API-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/alarme.iml" filepath="$PROJECT_DIR$/.idea/alarme.iml" />
     </modules>
   </component>
 </project>
