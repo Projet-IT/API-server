@@ -1,6 +1,16 @@
+GET http://localhost:8000/alarmestatus
+Accept: application/json
+
+###
 ###
 
-GET http://127.0.0.1:8000/alarme/0
+GET http://127.0.0.1:8000/alarme/1
+Accept: application/json
+
+###
+###
+
+GET http://127.0.0.1:8000/alarmestop/monmdp
 Accept: application/json
 
 ###
