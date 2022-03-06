@@ -1,0 +1,1 @@
+INSERT INTO devices(name,type,sensity) VALUES(?,?,?)

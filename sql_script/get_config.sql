@@ -1,0 +1,1 @@
+SELECT * from devices where id=?
