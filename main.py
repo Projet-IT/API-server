@@ -25,7 +25,7 @@ audio = Audio()
 
 stored_password = "monmdp"
 
-@app.get("/alarme/{status}")
+@app.post("/alarme/{status}")
 async def add_device(status: int):
     if status:
         audio.play_audio()
